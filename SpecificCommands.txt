@@ -1,2 +1,53 @@
 pylint --output=warningsTraining.txt --score=y  IoTTrainingApp\views.py 
 pylint --output=warningsTraining.txt --score=y  IoTTrainingApp\views.py   
+
+# Build and run containers
+docker-compose build
+docker-compose up -d
+
+# Create migrations
+docker-compose exec web python manage.py makemigrations
+docker-compose exec web python manage.py migrate
+
+# Create superuser
+docker-compose exec web python manage.py createsuperuser
+
+# View logs
+docker-compose logs -f
+
+# Login to DockerHub
+docker login
+
+# Build image
+docker build -t yourusername/iotgentester:latest .
+
+# Push to DockerHub
+docker push yourusername/iotgentester:latest
+
+
+
+# Initialize git repository
+git init
+
+# Add files
+git add .
+
+# Create initial commit
+git commit -m "Initial commit"
+
+# Add remote repository
+git remote add origin https://github.com/yourusername/iotgentester.git
+
+# Push to GitHub
+git push -u origin main
+
+# Create new branch for feature development
+git checkout -b feature/new-feature
+
+# After changes, commit and push
+git add .
+git commit -m "Add new feature"
+git push origin feature/new-feature
+
+# Create pull request on GitHub
+# After review, merge through GitHub interface
