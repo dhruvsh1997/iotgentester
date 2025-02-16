@@ -1,0 +1,63 @@
+/* IoTTestingApp/static/IoTTestingApp/css/style.css */
+.table-responsive {
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.form-range::-webkit-slider-thumb {
+    background: #0d6efd;
+}
+
+.form-range::-moz-range-thumb {
+    background: #0d6efd;
+}
+
+.badge {
+    font-size: 0.9em;
+}
+
+.list-group-item {
+    padding: 0.75rem 1.25rem;
+}
+
+/* Custom styles for the data table */
+#dataTable th {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+/* Custom loading spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-border .75s linear infinite;
+}
+
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}

@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  # nginx:
+  #   build: ./nginx
+  web:
+    build: .
+    command: gunicorn IoTGenTester.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    expose:
+      - 8000
+    environment:
+      - ./.env
+    networks:
+      - iot_network
+
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    ports:
+      - "80:80"
+    depends_on:
+      - web
+    networks:
+      - iot_network
+
+volumes:
+  static_volume:
+  media_volume:
+
+networks:
+  iot_network:
+    driver: bridge
