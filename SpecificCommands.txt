@@ -42,12 +42,16 @@ git remote add origin https://github.com/yourusername/iotgentester.git
 git push -u origin main
 
 # Create new branch for feature development
-git checkout -b feature/new-feature
+git checkout -b subfeature
 
 # After changes, commit and push
 git add .
 git commit -m "Add new feature"
-git push origin feature/new-feature
+git push origin subfeature
+
+git checkout main
 
 # Create pull request on GitHub
-# After review, merge through GitHub interface
+git merge master --allow-unrelated-histories
+
+git branch -d master
