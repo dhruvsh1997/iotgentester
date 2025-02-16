@@ -1,0 +1,2 @@
+pylint --output=warningsTraining.txt --score=y  IoTTrainingApp\views.py 
+pylint --output=warningsTraining.txt --score=y  IoTTrainingApp\views.py   

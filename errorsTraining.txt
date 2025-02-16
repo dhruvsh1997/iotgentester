@@ -1,0 +1,9 @@
+************* Module IoTTrainingApp.views
+IoTTrainingApp\views.py:18:55: W1401: Anomalous backslash in string: '\A'. String constant might be missing an r prefix. (anomalous-backslash-in-string)
+IoTTrainingApp\views.py:16:0: R0914: Too many local variables (17/15) (too-many-locals)
+IoTTrainingApp\views.py:60:20: E1101: Class 'TrainedModel' has no 'objects' member (no-member)
+IoTTrainingApp\views.py:16:16: W0613: Unused argument 'request' (unused-argument)
+
+------------------------------------------------------------------
+Your code has been rated at 7.65/10 (previous run: 3.24/10, +4.41)
+
